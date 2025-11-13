@@ -1,0 +1,44 @@
+version: '3.8'
+
+# Apache SeaTunnel 简化部署配置
+# 使用单机模式 + REST API
+
+services:
+  # ==========================================
+  # SeaTunnel 节点
+  # ==========================================
+  seatunnel:
+    image: apache/seatunnel:2.3.8
+    container_name: seatunnel-server
+    hostname: seatunnel-server
+    restart: unless-stopped
+    networks:
+      - seatunnel-network
+    ports:
+      - "8080:8080"  # REST API
+    environment:
+      - SEATUNNEL_OPTS=-Xms2g -Xmx4g
+    volumes:
+      - ./config:/opt/seatunnel/config
+      - ./logs:/opt/seatunnel/logs
+      - ./jobs:/opt/seatunnel/jobs
+      - seatunnel-data:/opt/seatunnel/data
+    command: |
+      sh -c "
+        echo '启动SeaTunnel服务...'
+        tail -f /dev/null
+      "
+    healthcheck:
+      test: ["CMD", "sh", "-c", "echo ok"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+networks:
+  seatunnel-network:
+    driver: bridge
+
+volumes:
+  seatunnel-data:
+    driver: local

@@ -1,0 +1,24 @@
+# Hazelcast集群配置 - 用于SeaTunnel分布式协调
+
+hazelcast:
+  cluster-name: seatunnel-cluster
+  
+  network:
+    port:
+      auto-increment: false
+      port: 5801
+    join:
+      multicast:
+        enabled: false
+      tcp-ip:
+        enabled: true
+        member-list:
+          - seatunnel-master:5801
+          - seatunnel-worker-1:5801
+          - seatunnel-worker-2:5801
+    
+  properties:
+    hazelcast.invocation.max.retry.count: 20
+    hazelcast.tcp.join.port.try.count: 30
+    hazelcast.logging.type: log4j2
+    hazelcast.operation.generic.thread.count: 50

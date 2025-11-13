@@ -1,0 +1,391 @@
+// 暗色模式样式
+html.dark {
+  // 全局背景和文字颜色
+  body {
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+  }
+
+  // 主布局
+  .main-layout {
+    // 侧边栏暗色样式
+    .sidebar {
+      background: #1e1e1e !important;
+      box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.3);
+      
+      .logo-container {
+        color: #e5e5e5;
+        border-bottom: 1px solid #2d2d2d;
+        
+        &:hover {
+          background: #252525;
+        }
+        
+        .logo-text-container {
+          .logo-d {
+            color: #409eff;
+          }
+          
+          .logo-rest {
+            color: #e5e5e5;
+          }
+        }
+        
+        .logo-icon-container {
+          .logo-d-icon {
+            color: #409eff;
+          }
+        }
+      }
+      
+      .sidebar-menu {
+        background: #1e1e1e !important;
+        
+        :deep(.el-menu-item) {
+          color: #a8a8a8;
+          
+          &:hover {
+            color: #409eff;
+            background: #252525;
+          }
+          
+          &.is-active {
+            color: #409eff;
+            background: #1a3a5a;
+            
+            &::after {
+              background: #409eff;
+            }
+          }
+        }
+
+        :deep(.el-sub-menu__title) {
+          color: #a8a8a8;
+
+          &:hover {
+            color: #409eff;
+            background: #252525;
+          }
+        }
+
+        :deep(.el-sub-menu.is-opened > .el-sub-menu__title) {
+          color: #409eff;
+          background: #1a3a5a;
+        }
+      }
+    }
+    
+    // 顶部导航栏暗色样式
+    .header {
+      background: #1e1e1e !important;
+      border-bottom: 1px solid #2d2d2d;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+      
+      .header-left {
+        .collapse-icon {
+          color: #e5e5e5;
+          
+          &:hover {
+            color: #409eff;
+            background: #252525;
+          }
+        }
+        
+        :deep(.el-breadcrumb) {
+          .el-breadcrumb__item {
+            .el-breadcrumb__inner {
+              color: #a8a8a8;
+              
+              &:hover {
+                color: #409eff;
+              }
+            }
+            
+            &:last-child .el-breadcrumb__inner {
+              color: #e5e5e5;
+            }
+          }
+          
+          .el-breadcrumb__separator {
+            color: #666;
+          }
+        }
+      }
+      
+      .header-right {
+        .search-box {
+          :deep(.el-input) {
+            .el-input__wrapper {
+              background: #252525;
+              
+              &:hover {
+                background: #2d2d2d;
+              }
+              
+              &.is-focus {
+                background: #1e1e1e;
+                box-shadow: 0 0 0 1px #409eff;
+              }
+            }
+            
+            .el-input__inner {
+              color: #e5e5e5;
+              
+              &::placeholder {
+                color: #666;
+              }
+            }
+          }
+        }
+        
+        .toolbar-icons {
+          :deep(.el-icon) {
+            color: #e5e5e5;
+          }
+
+          :deep(.el-icon:hover) {
+            color: #409eff;
+            background: #252525;
+          }
+          
+          .toolbar-badge {
+            :deep(.el-badge__content) {
+              background-color: #409eff;
+            }
+          }
+        }
+        
+        .user-info {
+          &:hover {
+            background: #252525;
+          }
+          
+          .username {
+            color: #e5e5e5;
+          }
+        }
+      }
+    }
+    
+    // 主内容区暗色样式
+    .main-content {
+      background: #141414 !important;
+    }
+  }
+
+  // Element Plus 组件暗色样式覆盖
+  .el-dropdown-menu {
+    background-color: #1e1e1e !important;
+    border: 1px solid #2d2d2d !important;
+    
+    .el-dropdown-menu__item {
+      color: #a8a8a8 !important;
+      
+      &:hover {
+        background-color: #252525 !important;
+        color: #409eff !important;
+      }
+      
+      &.is-disabled {
+        color: #666 !important;
+      }
+    }
+  }
+
+  .el-popper {
+    background-color: #1e1e1e !important;
+    border: 1px solid #2d2d2d !important;
+    color: #e5e5e5 !important;
+  }
+
+  .el-tooltip__popper {
+    background-color: #2d2d2d !important;
+    color: #e5e5e5 !important;
+    
+    .el-popper__arrow::before {
+      background: #2d2d2d !important;
+      border: 1px solid #2d2d2d !important;
+    }
+  }
+
+  // 表格暗色样式
+  .el-table {
+    background-color: #1e1e1e !important;
+    color: #e5e5e5 !important;
+    
+    th.el-table__cell {
+      background-color: #252525 !important;
+      color: #e5e5e5 !important;
+      border-bottom: 1px solid #2d2d2d !important;
+    }
+    
+    tr {
+      background-color: #1e1e1e !important;
+      
+      &:hover > td {
+        background-color: #252525 !important;
+      }
+    }
+    
+    td.el-table__cell {
+      border-bottom: 1px solid #2d2d2d !important;
+      color: #a8a8a8 !important;
+    }
+  }
+
+  // 卡片暗色样式
+  .el-card {
+    background-color: #1e1e1e !important;
+    border: 1px solid #2d2d2d !important;
+    color: #e5e5e5 !important;
+    
+    .el-card__header {
+      background-color: #252525 !important;
+      border-bottom: 1px solid #2d2d2d !important;
+      color: #e5e5e5 !important;
+    }
+  }
+
+  // 表单暗色样式
+  .el-form-item__label {
+    color: #a8a8a8 !important;
+  }
+
+  .el-input__wrapper {
+    background-color: #252525 !important;
+    box-shadow: 0 0 0 1px #2d2d2d inset !important;
+    
+    &:hover {
+      box-shadow: 0 0 0 1px #409eff inset !important;
+    }
+    
+    &.is-focus {
+      box-shadow: 0 0 0 1px #409eff inset !important;
+    }
+  }
+
+  .el-input__inner {
+    color: #e5e5e5 !important;
+    
+    &::placeholder {
+      color: #666 !important;
+    }
+  }
+
+  .el-textarea__inner {
+    background-color: #252525 !important;
+    border-color: #2d2d2d !important;
+    color: #e5e5e5 !important;
+    
+    &::placeholder {
+      color: #666 !important;
+    }
+  }
+
+  // 选择器暗色样式
+  .el-select-dropdown {
+    background-color: #1e1e1e !important;
+    border: 1px solid #2d2d2d !important;
+  }
+
+  .el-select-dropdown__item {
+    color: #a8a8a8 !important;
+    
+    &:hover {
+      background-color: #252525 !important;
+    }
+    
+    &.selected {
+      color: #409eff !important;
+    }
+  }
+
+  // 按钮暗色样式
+  .el-button {
+    &--default {
+      background-color: #252525 !important;
+      border-color: #2d2d2d !important;
+      color: #e5e5e5 !important;
+      
+      &:hover {
+        background-color: #2d2d2d !important;
+        border-color: #409eff !important;
+        color: #409eff !important;
+      }
+    }
+  }
+
+  // 对话框暗色样式
+  .el-dialog {
+    background-color: #1e1e1e !important;
+    border: 1px solid #2d2d2d !important;
+    
+    .el-dialog__header {
+      background-color: #252525 !important;
+      border-bottom: 1px solid #2d2d2d !important;
+    }
+    
+    .el-dialog__title {
+      color: #e5e5e5 !important;
+    }
+    
+    .el-dialog__body {
+      color: #a8a8a8 !important;
+    }
+  }
+
+  // 分页暗色样式
+  .el-pagination {
+    .el-pager li {
+      background-color: #252525 !important;
+      color: #a8a8a8 !important;
+      
+      &:hover {
+        color: #409eff !important;
+      }
+      
+      &.active {
+        background-color: #409eff !important;
+        color: #fff !important;
+      }
+    }
+    
+    button {
+      background-color: #252525 !important;
+      color: #a8a8a8 !important;
+      
+      &:hover {
+        color: #409eff !important;
+      }
+      
+      &:disabled {
+        color: #666 !important;
+      }
+    }
+  }
+
+  // 消息提示暗色样式
+  .el-message {
+    background-color: #1e1e1e !important;
+    border: 1px solid #2d2d2d !important;
+    
+    .el-message__content {
+      color: #e5e5e5 !important;
+    }
+  }
+
+  // 通知暗色样式
+  .el-notification {
+    background-color: #1e1e1e !important;
+    border: 1px solid #2d2d2d !important;
+    
+    .el-notification__title {
+      color: #e5e5e5 !important;
+    }
+    
+    .el-notification__content {
+      color: #a8a8a8 !important;
+    }
+  }
+}
+

@@ -1,0 +1,116 @@
+version: '3.8'
+
+services:
+  # Nginx + 前端
+  nginx:
+    image: nginx:alpine
+    container_name: datahub-nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /opt/datahub/config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - /opt/datahub/frontend:/usr/share/nginx/html:ro
+      - /opt/datahub/logs/nginx:/var/log/nginx
+    mem_limit: 512m
+    networks:
+      - datahub-network
+    depends_on:
+      - backend
+
+  # 后端API服务
+  backend:
+    image: openjdk:11-jre-slim
+    container_name: datahub-backend
+    restart: always
+    environment:
+      JAVA_OPTS: "-Xmx1g -Xms512m -XX:+UseG1GC"
+      SPRING_PROFILES_ACTIVE: prod
+      DB_HOST: 10.2.0.16
+      DB_PORT: 3306
+      DB_NAME: datahub
+      DB_USER: root
+      DB_PASSWORD: DataHub@2025
+      REDIS_HOST: 10.2.0.16
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: DataHub@2025
+      TZ: Asia/Shanghai
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/datahub/backend:/app
+      - /opt/datahub/logs/backend:/app/logs
+    working_dir: /app
+    command: java ${JAVA_OPTS} -jar datahub-backend.jar
+    mem_limit: 1536m
+    mem_reservation: 1g
+    networks:
+      - datahub-network
+
+  # Chat2DB
+  chat2db:
+    image: chat2db/chat2db:latest
+    container_name: datahub-chat2db
+    restart: always
+    environment:
+      JAVA_OPTS: "-Xmx1536m -Xms512m"
+      TZ: Asia/Shanghai
+    ports:
+      - "10824:10824"
+    volumes:
+      - /opt/datahub/data/chat2db:/app/data
+      - /opt/datahub/logs/chat2db:/app/logs
+    mem_limit: 2g
+    mem_reservation: 1g
+    networks:
+      - datahub-network
+
+  # DBSwitch
+  dbswitch:
+    image: openjdk:11-jre-slim
+    container_name: datahub-dbswitch
+    restart: always
+    environment:
+      JAVA_OPTS: "-Xmx1280m -Xms512m"
+      DB_HOST: 10.2.0.16
+      DB_PORT: 3306
+      TZ: Asia/Shanghai
+    ports:
+      - "9088:9088"
+    volumes:
+      - /opt/datahub/dbswitch:/app
+      - /opt/datahub/data/dbswitch:/app/data
+      - /opt/datahub/logs/dbswitch:/app/logs
+    working_dir: /app
+    mem_limit: 1536m
+    mem_reservation: 1g
+    networks:
+      - datahub-network
+
+  # DataCap
+  datacap:
+    image: openjdk:11-jre-slim
+    container_name: datahub-datacap
+    restart: always
+    environment:
+      JAVA_OPTS: "-Xmx1280m -Xms512m"
+      DB_HOST: 10.2.0.16
+      DB_PORT: 3306
+      TZ: Asia/Shanghai
+    ports:
+      - "9999:9999"
+    volumes:
+      - /opt/datahub/datacap:/app
+      - /opt/datahub/data/datacap:/app/data
+      - /opt/datahub/logs/datacap:/app/logs
+    working_dir: /app
+    mem_limit: 1536m
+    mem_reservation: 1g
+    networks:
+      - datahub-network
+
+networks:
+  datahub-network:
+    driver: bridge
+

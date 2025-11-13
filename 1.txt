@@ -1,0 +1,662 @@
+[2025-11-12 22:19:32] [INFO] 开始执行同步任务: ods_user_register_info_all_dc
+[2025-11-12 22:19:32] [INFO] 源数据源: MySQL_mgdevin (MySQL)
+[2025-11-12 22:19:32] [INFO] 目标数据源: Trino (Trino)
+[2025-11-12 22:19:32] [INFO] 使用 SeaTunnel 引擎执行同步
+[2025-11-12 22:19:33] [INFO] SeaTunnel 任务配置已生成: /opt/seatunnel/jobs/job_1_1762957172997.conf
+[2025-11-12 22:19:33] [INFO] 开始执行 SeaTunnel 任务...
+[2025-11-12 22:19:34] [ERROR] [] 2025-11-12 14:19:34,800 WARN org.apache.seatunnel.core.starter.seatunnel.args.ClientCommandArgs$MasterTypeValidator -
+[2025-11-12 22:19:34] [ERROR] ******************************************************************************************
+[2025-11-12 22:19:34] [ERROR] -e and --deploy-mode deprecated in 2.3.1, please use -m and --master instead of it
+[2025-11-12 22:19:34] [ERROR] ******************************************************************************************
+[2025-11-12 22:19:34] [ERROR] Nov 12, 2025 2:19:34 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:34] [ERROR] INFO: Loading configuration '/opt/seatunnel/config/seatunnel.yaml' from System property 'seatunnel.config'
+[2025-11-12 22:19:34] [ERROR] Nov 12, 2025 2:19:34 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:34] [ERROR] INFO: Using configuration file at /opt/seatunnel/config/seatunnel.yaml
+[2025-11-12 22:19:34] [ERROR] Nov 12, 2025 2:19:34 PM org.apache.seatunnel.engine.common.config.SeaTunnelConfig
+[2025-11-12 22:19:34] [ERROR] INFO: seatunnel.home is /opt/seatunnel
+[2025-11-12 22:19:34] [ERROR] Nov 12, 2025 2:19:34 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:34] [ERROR] INFO: Loading configuration '/opt/seatunnel/config/hazelcast.yaml' from System property 'hazelcast.config'
+[2025-11-12 22:19:34] [ERROR] Nov 12, 2025 2:19:34 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:34] [ERROR] INFO: Using configuration file at /opt/seatunnel/config/hazelcast.yaml
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.042+0000: [GC pause (G1 Evacuation Pause) (young), 0.0082159 secs]
+[2025-11-12 22:19:35] [INFO] [Parallel Time: 4.7 ms, GC Workers: 4]
+[2025-11-12 22:19:35] [INFO] [GC Worker Start (ms): Min: 794.7, Avg: 795.3, Max: 795.8, Diff: 1.0]
+[2025-11-12 22:19:35] [INFO] [Ext Root Scanning (ms): Min: 0.1, Avg: 0.6, Max: 1.4, Diff: 1.3, Sum: 2.3]
+[2025-11-12 22:19:35] [INFO] [Update RS (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:19:35] [INFO] [Processed Buffers: Min: 0, Avg: 0.0, Max: 0, Diff: 0, Sum: 0]
+[2025-11-12 22:19:35] [INFO] [Scan RS (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:19:35] [INFO] [Code Root Scanning (ms): Min: 0.0, Avg: 0.2, Max: 0.6, Diff: 0.6, Sum: 0.9]
+[2025-11-12 22:19:35] [INFO] [Object Copy (ms): Min: 3.2, Avg: 3.3, Max: 3.4, Diff: 0.2, Sum: 13.2]
+[2025-11-12 22:19:35] [INFO] [Termination (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:19:35] [INFO] [Termination Attempts: Min: 1, Avg: 3.8, Max: 7, Diff: 6, Sum: 15]
+[2025-11-12 22:19:35] [INFO] [GC Worker Other (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:19:35] [INFO] [GC Worker Total (ms): Min: 3.6, Avg: 4.1, Max: 4.7, Diff: 1.0, Sum: 16.6]
+[2025-11-12 22:19:35] [INFO] [GC Worker End (ms): Min: 799.4, Avg: 799.4, Max: 799.4, Diff: 0.0]
+[2025-11-12 22:19:35] [INFO] [Code Root Fixup: 0.1 ms]
+[2025-11-12 22:19:35] [INFO] [Code Root Purge: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Clear CT: 0.1 ms]
+[2025-11-12 22:19:35] [INFO] [Other: 3.3 ms]
+[2025-11-12 22:19:35] [INFO] [Choose CSet: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Ref Proc: 3.0 ms]
+[2025-11-12 22:19:35] [INFO] [Ref Enq: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Redirty Cards: 0.1 ms]
+[2025-11-12 22:19:35] [INFO] [Humongous Register: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Humongous Reclaim: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Free CSet: 0.1 ms]
+[2025-11-12 22:19:35] [INFO] [Eden: 52224.0K(52224.0K)->0.0B(45056.0K) Survivors: 0.0B->7168.0K Heap: 52224.0K(1024.0M)->9879.0K(1024.0M)]
+[2025-11-12 22:19:35] [INFO] [Times: user=0.02 sys=0.01, real=0.01 secs]
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.250+0000: [GC pause (G1 Evacuation Pause) (young), 0.0075261 secs]
+[2025-11-12 22:19:35] [INFO] [Parallel Time: 5.7 ms, GC Workers: 4]
+[2025-11-12 22:19:35] [INFO] [GC Worker Start (ms): Min: 1002.2, Avg: 1003.1, Max: 1003.9, Diff: 1.7]
+[2025-11-12 22:19:35] [INFO] [Ext Root Scanning (ms): Min: 0.0, Avg: 0.5, Max: 1.4, Diff: 1.4, Sum: 1.9]
+[2025-11-12 22:19:35] [INFO] [Update RS (ms): Min: 0.0, Avg: 0.1, Max: 0.2, Diff: 0.2, Sum: 0.3]
+[2025-11-12 22:19:35] [INFO] [Processed Buffers: Min: 0, Avg: 0.8, Max: 2, Diff: 2, Sum: 3]
+[2025-11-12 22:19:35] [INFO] [Scan RS (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.1]
+[2025-11-12 22:19:35] [INFO] [Code Root Scanning (ms): Min: 0.0, Avg: 0.8, Max: 2.0, Diff: 2.0, Sum: 3.2]
+[2025-11-12 22:19:35] [INFO] [Object Copy (ms): Min: 2.4, Avg: 3.3, Max: 4.0, Diff: 1.6, Sum: 13.3]
+[2025-11-12 22:19:35] [INFO] [Termination (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:19:35] [INFO] [Termination Attempts: Min: 1, Avg: 1.5, Max: 3, Diff: 2, Sum: 6]
+[2025-11-12 22:19:35] [INFO] [GC Worker Other (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:19:35] [INFO] [GC Worker Total (ms): Min: 4.0, Avg: 4.7, Max: 5.6, Diff: 1.7, Sum: 18.8]
+[2025-11-12 22:19:35] [INFO] [GC Worker End (ms): Min: 1007.8, Avg: 1007.8, Max: 1007.8, Diff: 0.0]
+[2025-11-12 22:19:35] [INFO] [Code Root Fixup: 0.1 ms]
+[2025-11-12 22:19:35] [INFO] [Code Root Purge: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Clear CT: 0.1 ms]
+[2025-11-12 22:19:35] [INFO] [Other: 1.7 ms]
+[2025-11-12 22:19:35] [INFO] [Choose CSet: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Ref Proc: 1.4 ms]
+[2025-11-12 22:19:35] [INFO] [Ref Enq: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Redirty Cards: 0.1 ms]
+[2025-11-12 22:19:35] [INFO] [Humongous Register: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Humongous Reclaim: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Free CSet: 0.1 ms]
+[2025-11-12 22:19:35] [INFO] [Eden: 45056.0K(45056.0K)->0.0B(71680.0K) Survivors: 7168.0K->3072.0K Heap: 54935.0K(1024.0M)->10724.5K(1024.0M)]
+[2025-11-12 22:19:35] [INFO] [Times: user=0.02 sys=0.00, real=0.01 secs]
+[2025-11-12 22:19:35] [ERROR] Nov 12, 2025 2:19:35 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:35] [ERROR] INFO: Loading configuration '/opt/seatunnel/config/hazelcast-client.yaml' from System property 'hazelcast.client.config'
+[2025-11-12 22:19:35] [ERROR] Nov 12, 2025 2:19:35 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:35] [ERROR] INFO: Using configuration file at /opt/seatunnel/config/hazelcast-client.yaml
+[2025-11-12 22:19:35] [ERROR] [] 2025-11-12 14:19:35,411 WARN com.hazelcast.instance.AddressPicker - [LOCAL] [seatunnel-853955] [5.1] Cannot resolve hostname: 'seatunnel-master'
+[2025-11-12 22:19:35] [ERROR] [] 2025-11-12 14:19:35,478 WARN com.hazelcast.instance.AddressPicker - [LOCAL] [seatunnel-853955] [5.1] Cannot resolve hostname: 'seatunnel-worker-2'
+[2025-11-12 22:19:35] [ERROR] [] 2025-11-12 14:19:35,527 WARN com.hazelcast.instance.AddressPicker - [LOCAL] [seatunnel-853955] [5.1] Cannot resolve hostname: 'seatunnel-worker-1'
+[2025-11-12 22:19:35] [ERROR] [] 2025-11-12 14:19:35,528 WARN com.hazelcast.instance.AddressPicker - [LOCAL] [seatunnel-853955] [5.1] Could not find a matching address to start with! Picking one of non-loopback addresses.
+[2025-11-12 22:19:35] [INFO] [] 2025-11-12 14:19:35,549 INFO org.apache.seatunnel.engine.server.SeaTunnelServer - SeaTunnel server start...
+[2025-11-12 22:19:35] [INFO] [] 2025-11-12 14:19:35,551 INFO com.hazelcast.system - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Based on Hazelcast IMDG version: 5.1.0 (20220228 - 21f20e7)
+[2025-11-12 22:19:35] [INFO] [] 2025-11-12 14:19:35,551 INFO com.hazelcast.system - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Cluster name: seatunnel-853955
+[2025-11-12 22:19:35] [INFO] [] 2025-11-12 14:19:35,551 INFO com.hazelcast.system - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:19:35] [INFO]
+[2025-11-12 22:19:35] [INFO] _____ _____ _
+[2025-11-12 22:19:35] [INFO] / ___| |_ _| | |
+[2025-11-12 22:19:35] [INFO] \ `--. ___ __ _ | | _ _ _ __ _ __ ___ | |
+[2025-11-12 22:19:35] [INFO] `--. \ / _ \ / _` | | | | | | || '_ \ | '_ \ / _ \| |
+[2025-11-12 22:19:35] [INFO] /\__/ /| __/| (_| | | | | |_| || | | || | | || __/| |
+[2025-11-12 22:19:35] [INFO] \____/ \___| \__,_| \_/ \__,_||_| |_||_| |_| \___||_|
+[2025-11-12 22:19:35] [INFO]
+[2025-11-12 22:19:35] [INFO]
+[2025-11-12 22:19:35] [INFO] [] 2025-11-12 14:19:35,551 INFO com.hazelcast.system - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Copyright © 2021-2022 The Apache Software Foundation. Apache SeaTunnel, SeaTunnel, and its feather logo are trademarks of The Apache Software Foundation.
+[2025-11-12 22:19:35] [INFO] [] 2025-11-12 14:19:35,552 INFO com.hazelcast.system - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Integrity Checker is disabled. Fail-fast on corrupted executables will not be performed.
+[2025-11-12 22:19:35] [INFO] To enable integrity checker do one of the following:
+[2025-11-12 22:19:35] [INFO] - Change member config using Java API: config.setIntegrityCheckerEnabled(true);
+[2025-11-12 22:19:35] [INFO] - Change XML/YAML configuration property: Set hazelcast.integrity-checker.enabled to true
+[2025-11-12 22:19:35] [INFO] - Add system property: -Dhz.integritychecker.enabled=true (for Hazelcast embedded, works only when loading config via Config.load)
+[2025-11-12 22:19:35] [INFO] - Add environment variable: HZ_INTEGRITYCHECKER_ENABLED=true (recommended when running container image. For Hazelcast embedded, works only when loading config via Config.load)
+[2025-11-12 22:19:35] [INFO] [] 2025-11-12 14:19:35,554 INFO com.hazelcast.system - [172.18.0.2]:5801 [seatunnel-853955] [5.1] The Jet engine is disabled.
+[2025-11-12 22:19:35] [INFO] To enable the Jet engine on the members, do one of the following:
+[2025-11-12 22:19:35] [INFO] - Change member config using Java API: config.getJetConfig().setEnabled(true)
+[2025-11-12 22:19:35] [INFO] - Change XML/YAML configuration property: Set hazelcast.jet.enabled to true
+[2025-11-12 22:19:35] [INFO] - Add system property: -Dhz.jet.enabled=true (for Hazelcast embedded, works only when loading config via Config.load)
+[2025-11-12 22:19:35] [INFO] - Add environment variable: HZ_JET_ENABLED=true (recommended when running container image. For Hazelcast embedded, works only when loading config via Config.load)
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.706+0000: [GC pause (Metadata GC Threshold) (young) (initial-mark), 0.0072873 secs]
+[2025-11-12 22:19:35] [INFO] [Parallel Time: 5.5 ms, GC Workers: 4]
+[2025-11-12 22:19:35] [INFO] [GC Worker Start (ms): Min: 1458.3, Avg: 1459.0, Max: 1459.8, Diff: 1.5]
+[2025-11-12 22:19:35] [INFO] [Ext Root Scanning (ms): Min: 1.3, Avg: 2.7, Max: 5.2, Diff: 3.9, Sum: 10.7]
+[2025-11-12 22:19:35] [INFO] [Update RS (ms): Min: 0.0, Avg: 0.3, Max: 0.6, Diff: 0.6, Sum: 1.1]
+[2025-11-12 22:19:35] [INFO] [Processed Buffers: Min: 0, Avg: 2.5, Max: 4, Diff: 4, Sum: 10]
+[2025-11-12 22:19:35] [INFO] [Scan RS (ms): Min: 0.0, Avg: 0.1, Max: 0.3, Diff: 0.3, Sum: 0.6]
+[2025-11-12 22:19:35] [INFO] [Code Root Scanning (ms): Min: 0.0, Avg: 0.1, Max: 0.1, Diff: 0.1, Sum: 0.2]
+[2025-11-12 22:19:35] [INFO] [Object Copy (ms): Min: 0.1, Avg: 1.0, Max: 1.4, Diff: 1.3, Sum: 3.9]
+[2025-11-12 22:19:35] [INFO] [Termination (ms): Min: 0.0, Avg: 0.5, Max: 0.7, Diff: 0.7, Sum: 2.0]
+[2025-11-12 22:19:35] [INFO] [Termination Attempts: Min: 1, Avg: 1.2, Max: 2, Diff: 1, Sum: 5]
+[2025-11-12 22:19:35] [INFO] [GC Worker Other (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:19:35] [INFO] [GC Worker Total (ms): Min: 3.9, Avg: 4.6, Max: 5.4, Diff: 1.5, Sum: 18.5]
+[2025-11-12 22:19:35] [INFO] [GC Worker End (ms): Min: 1463.6, Avg: 1463.7, Max: 1463.7, Diff: 0.1]
+[2025-11-12 22:19:35] [INFO] [Code Root Fixup: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Code Root Purge: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Clear CT: 0.4 ms]
+[2025-11-12 22:19:35] [INFO] [Other: 1.4 ms]
+[2025-11-12 22:19:35] [INFO] [Choose CSet: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Ref Proc: 1.1 ms]
+[2025-11-12 22:19:35] [INFO] [Ref Enq: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Redirty Cards: 0.1 ms]
+[2025-11-12 22:19:35] [INFO] [Humongous Register: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Humongous Reclaim: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Free CSet: 0.0 ms]
+[2025-11-12 22:19:35] [INFO] [Eden: 25600.0K(65536.0K)->0.0B(110.0M) Survivors: 3072.0K->7168.0K Heap: 36324.5K(1024.0M)->14216.6K(1024.0M)]
+[2025-11-12 22:19:35] [INFO] [Times: user=0.02 sys=0.00, real=0.00 secs]
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.713+0000: [GC concurrent-root-region-scan-start]
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.716+0000: [GC concurrent-root-region-scan-end, 0.0024879 secs]
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.716+0000: [GC concurrent-mark-start]
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.726+0000: [GC concurrent-mark-end, 0.0105456 secs]
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.726+0000: [GC remark 2025-11-12T14:19:35.726+0000: [Finalize Marking, 0.0007393 secs] 2025-11-12T14:19:35.727+0000: [GC ref-proc, 0.0005078 secs] 2025-11-12T14:19:35.728+0000: [Unloading, 0.0041774 secs], 0.0056876 secs]
+[2025-11-12 22:19:35] [INFO] [Times: user=0.02 sys=0.00, real=0.00 secs]
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.732+0000: [GC cleanup 15240K->13192K(1024M), 0.0008056 secs]
+[2025-11-12 22:19:35] [INFO] [Times: user=0.00 sys=0.00, real=0.00 secs]
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.733+0000: [GC concurrent-cleanup-start]
+[2025-11-12 22:19:35] [INFO] 2025-11-12T14:19:35.733+0000: [GC concurrent-cleanup-end, 0.0000160 secs]
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,012 INFO com.hazelcast.system.security - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Enable DEBUG/FINE log level for log category com.hazelcast.system.security or use -Dhazelcast.security.recommendations system property to see 🔒 security recommendations and the status of current config.
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,076 INFO org.apache.seatunnel.engine.server.SeaTunnelNodeContext - Using LiteNodeDropOutTcpIpJoiner TCP/IP discovery
+[2025-11-12 22:19:36] [ERROR] [] 2025-11-12 14:19:36,078 WARN com.hazelcast.cp.CPSubsystem - [172.18.0.2]:5801 [seatunnel-853955] [5.1] CP Subsystem is not enabled. CP data structures will operate in UNSAFE mode! Please note that UNSAFE mode will not provide strong consistency guarantees.
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,225 INFO org.apache.seatunnel.engine.core.classloader.DefaultClassLoaderService - start classloader service
+[2025-11-12 22:19:36] [ERROR] Nov 12, 2025 2:19:36 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:36] [ERROR] INFO: Loading configuration '/opt/seatunnel/config/seatunnel.yaml' from System property 'seatunnel.config'
+[2025-11-12 22:19:36] [ERROR] Nov 12, 2025 2:19:36 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:36] [ERROR] INFO: Using configuration file at /opt/seatunnel/config/seatunnel.yaml
+[2025-11-12 22:19:36] [ERROR] Nov 12, 2025 2:19:36 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:36] [ERROR] INFO: Loading configuration '/opt/seatunnel/config/hazelcast.yaml' from System property 'hazelcast.config'
+[2025-11-12 22:19:36] [ERROR] Nov 12, 2025 2:19:36 PM com.hazelcast.internal.config.AbstractConfigLocator
+[2025-11-12 22:19:36] [ERROR] INFO: Using configuration file at /opt/seatunnel/config/hazelcast.yaml
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,249 INFO org.apache.seatunnel.engine.server.TaskExecutionService - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Created new BusWork : 447144896
+[2025-11-12 22:19:36] [ERROR] [] 2025-11-12 14:19:36,250 WARN org.apache.seatunnel.engine.server.TaskExecutionService - [172.18.0.2]:5801 [seatunnel-853955] [5.1] The Node is not ready yet, Node state STARTING,looking forward to the next scheduling
+[2025-11-12 22:19:36] [ERROR] [] 2025-11-12 14:19:36,262 WARN org.apache.seatunnel.engine.server.service.slot.DefaultSlotService - failed send heartbeat to resource manager, will retry later. this address: [172.18.0.2]:5801
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,266 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:19:36] [INFO] ***********************************************
+[2025-11-12 22:19:36] [INFO] CoordinatorService Thread Pool Status
+[2025-11-12 22:19:36] [INFO] ***********************************************
+[2025-11-12 22:19:36] [INFO] activeCount : 0
+[2025-11-12 22:19:36] [INFO] corePoolSize : 0
+[2025-11-12 22:19:36] [INFO] maximumPoolSize : 2147483647
+[2025-11-12 22:19:36] [INFO] poolSize : 0
+[2025-11-12 22:19:36] [INFO] completedTaskCount : 0
+[2025-11-12 22:19:36] [INFO] taskCount : 0
+[2025-11-12 22:19:36] [INFO] ***********************************************
+[2025-11-12 22:19:36] [INFO]
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,395 INFO com.hazelcast.internal.diagnostics.Diagnostics - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,401 INFO com.hazelcast.core.LifecycleService - [172.18.0.2]:5801 [seatunnel-853955] [5.1] [172.18.0.2]:5801 is STARTING
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,423 INFO com.hazelcast.internal.cluster.ClusterService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:19:36] [ERROR] [] 2025-11-12 14:19:36,422 WARN org.apache.seatunnel.engine.server.LiteNodeDropOutTcpIpJoiner - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Cannot resolve hostname 'seatunnel-master'. Please make sure host is valid and reachable.
+[2025-11-12 22:19:36] [ERROR] [] 2025-11-12 14:19:36,422 WARN org.apache.seatunnel.engine.server.LiteNodeDropOutTcpIpJoiner - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Cannot resolve hostname 'seatunnel-worker-2'. Please make sure host is valid and reachable.
+[2025-11-12 22:19:36] [INFO]
+[2025-11-12 22:19:36] [INFO] Members {size:1, ver:1} [
+[2025-11-12 22:19:36] [INFO] Member [172.18.0.2]:5801 - edae4d4d-de8f-4b2b-9be2-69adb3c41cdd this master
+[2025-11-12 22:19:36] [INFO] ]
+[2025-11-12 22:19:36] [INFO]
+[2025-11-12 22:19:36] [ERROR] [] 2025-11-12 14:19:36,422 WARN org.apache.seatunnel.engine.server.LiteNodeDropOutTcpIpJoiner - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Cannot resolve hostname 'seatunnel-worker-1'. Please make sure host is valid and reachable.
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,432 INFO com.hazelcast.core.LifecycleService - [172.18.0.2]:5801 [seatunnel-853955] [5.1] [172.18.0.2]:5801 is STARTED
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,468 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1] This node become a new active master node, begin init coordinator service
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,471 INFO com.hazelcast.client.impl.spi.ClientInvocationService - hz.client_1 [seatunnel-853955] [5.1] Running with 2 response threads, dynamic=true
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,485 INFO com.hazelcast.core.LifecycleService - hz.client_1 [seatunnel-853955] [5.1] HazelcastClient 5.1 (20220228 - 21f20e7) is STARTING
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,487 INFO com.hazelcast.core.LifecycleService - hz.client_1 [seatunnel-853955] [5.1] HazelcastClient 5.1 (20220228 - 21f20e7) is STARTED
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,505 INFO com.hazelcast.client.impl.connection.ClientConnectionManager - hz.client_1 [seatunnel-853955] [5.1] Trying to connect to cluster: seatunnel-853955
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,507 INFO com.hazelcast.client.impl.connection.ClientConnectionManager - hz.client_1 [seatunnel-853955] [5.1] Trying to connect to [localhost]:5801
+[2025-11-12 22:19:36] [INFO] 2025-11-12T14:19:36.512+0000: [GC pause (Metadata GC Threshold) (young) (initial-mark), 0.0146844 secs]
+[2025-11-12 22:19:36] [INFO] [Parallel Time: 9.4 ms, GC Workers: 4]
+[2025-11-12 22:19:36] [INFO] [GC Worker Start (ms): Min: 2264.6, Avg: 2264.8, Max: 2265.1, Diff: 0.5]
+[2025-11-12 22:19:36] [INFO] [Ext Root Scanning (ms): Min: 2.2, Avg: 4.2, Max: 8.9, Diff: 6.8, Sum: 16.8]
+[2025-11-12 22:19:36] [INFO] [Update RS (ms): Min: 0.0, Avg: 0.4, Max: 0.5, Diff: 0.5, Sum: 1.5]
+[2025-11-12 22:19:36] [INFO] [Processed Buffers: Min: 0, Avg: 4.8, Max: 14, Diff: 14, Sum: 19]
+[2025-11-12 22:19:36] [INFO] [Scan RS (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:19:36] [INFO] [Code Root Scanning (ms): Min: 0.0, Avg: 0.1, Max: 0.2, Diff: 0.2, Sum: 0.5]
+[2025-11-12 22:19:36] [INFO] [Object Copy (ms): Min: 0.0, Avg: 3.6, Max: 4.9, Diff: 4.9, Sum: 14.2]
+[2025-11-12 22:19:36] [INFO] [Termination (ms): Min: 0.0, Avg: 0.6, Max: 0.9, Diff: 0.9, Sum: 2.4]
+[2025-11-12 22:19:36] [INFO] [Termination Attempts: Min: 1, Avg: 1.0, Max: 1, Diff: 0, Sum: 4]
+[2025-11-12 22:19:36] [INFO] [GC Worker Other (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:19:36] [INFO] [GC Worker Total (ms): Min: 8.6, Avg: 8.9, Max: 9.0, Diff: 0.4, Sum: 35.5]
+[2025-11-12 22:19:36] [INFO] [GC Worker End (ms): Min: 2273.6, Avg: 2273.7, Max: 2273.7, Diff: 0.2]
+[2025-11-12 22:19:36] [INFO] [Code Root Fixup: 0.0 ms]
+[2025-11-12 22:19:36] [INFO] [Code Root Purge: 0.0 ms]
+[2025-11-12 22:19:36] [INFO] [Clear CT: 0.2 ms]
+[2025-11-12 22:19:36] [INFO] [Other: 5.1 ms]
+[2025-11-12 22:19:36] [INFO] [Choose CSet: 0.0 ms]
+[2025-11-12 22:19:36] [INFO] [Ref Proc: 4.6 ms]
+[2025-11-12 22:19:36] [INFO] [Ref Enq: 0.0 ms]
+[2025-11-12 22:19:36] [INFO] [Redirty Cards: 0.1 ms]
+[2025-11-12 22:19:36] [INFO] [Humongous Register: 0.0 ms]
+[2025-11-12 22:19:36] [INFO] [Humongous Reclaim: 0.0 ms]
+[2025-11-12 22:19:36] [INFO] [Free CSet: 0.1 ms]
+[2025-11-12 22:19:36] [INFO] [Eden: 102.0M(110.0M)->0.0B(269.0M) Survivors: 7168.0K->15360.0K Heap: 113.4M(1024.0M)->22730.5K(1024.0M)]
+[2025-11-12 22:19:36] [INFO] [Times: user=0.05 sys=0.00, real=0.02 secs]
+[2025-11-12 22:19:36] [INFO] 2025-11-12T14:19:36.527+0000: [GC concurrent-root-region-scan-start]
+[2025-11-12 22:19:36] [INFO] 2025-11-12T14:19:36.536+0000: [GC concurrent-root-region-scan-end, 0.0088033 secs]
+[2025-11-12 22:19:36] [INFO] 2025-11-12T14:19:36.536+0000: [GC concurrent-mark-start]
+[2025-11-12 22:19:36] [INFO] 2025-11-12T14:19:36.550+0000: [GC concurrent-mark-end, 0.0141797 secs]
+[2025-11-12 22:19:36] [INFO] 2025-11-12T14:19:36.555+0000: [GC remark 2025-11-12T14:19:36.555+0000: [Finalize Marking, 0.0013422 secs] 2025-11-12T14:19:36.556+0000: [GC ref-proc, 0.0008080 secs] 2025-11-12T14:19:36.557+0000: [Unloading, 0.0055280 secs], 0.0079687 secs]
+[2025-11-12 22:19:36] [INFO] [Times: user=0.03 sys=0.01, real=0.00 secs]
+[2025-11-12 22:19:36] [INFO] 2025-11-12T14:19:36.563+0000: [GC cleanup 28874K->28874K(1024M), 0.0009024 secs]
+[2025-11-12 22:19:36] [INFO] [Times: user=0.00 sys=0.00, real=0.00 secs]
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,578 INFO com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Received auth from Connection[id=1, /127.0.0.1:5801->/127.0.0.1:42008, qualifier=null, endpoint=[127.0.0.1]:42008, remoteUuid=99145094-f3c5-4f50-a15a-1c2429bcb152, alive=true, connectionType=JVM, planeIndex=-1], successfully authenticated, clientUuid: 99145094-f3c5-4f50-a15a-1c2429bcb152, client name: hz.client_1, client version: 5.1
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,582 INFO com.hazelcast.core.LifecycleService - hz.client_1 [seatunnel-853955] [5.1] HazelcastClient 5.1 (20220228 - 21f20e7) is CLIENT_CONNECTED
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,583 INFO com.hazelcast.client.impl.connection.ClientConnectionManager - hz.client_1 [seatunnel-853955] [5.1] Authenticated with server [172.18.0.2]:5801:edae4d4d-de8f-4b2b-9be2-69adb3c41cdd, server version: 5.1, local address: /127.0.0.1:42008
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,584 INFO com.hazelcast.internal.diagnostics.Diagnostics - hz.client_1 [seatunnel-853955] [5.1] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,609 INFO com.hazelcast.client.impl.spi.ClientClusterService - hz.client_1 [seatunnel-853955] [5.1]
+[2025-11-12 22:19:36] [INFO]
+[2025-11-12 22:19:36] [INFO] Members [1] {
+[2025-11-12 22:19:36] [INFO] Member [172.18.0.2]:5801 - edae4d4d-de8f-4b2b-9be2-69adb3c41cdd
+[2025-11-12 22:19:36] [INFO] }
+[2025-11-12 22:19:36] [INFO]
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,633 INFO com.hazelcast.client.impl.statistics.ClientStatisticsService - Client statistics is enabled with period 5 seconds.
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,673 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Loaded event handlers: [org.apache.seatunnel.api.event.LoggingEventHandler@6927d592]
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,688 INFO com.hazelcast.internal.partition.impl.PartitionStateManager - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Initializing cluster partition table arrangement...
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,693 INFO org.apache.seatunnel.core.starter.utils.ConfigBuilder - Loading config file from path: /opt/seatunnel/jobs/job_1_1762957172997.conf
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,800 INFO org.apache.seatunnel.core.starter.utils.ConfigShadeUtils - Load config shade spi: [base64]
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,840 INFO org.apache.seatunnel.core.starter.utils.ConfigBuilder - Parsed config file:
+[2025-11-12 22:19:36] [INFO] {
+[2025-11-12 22:19:36] [INFO] "sink" : [
+[2025-11-12 22:19:36] [INFO] {
+[2025-11-12 22:19:36] [INFO] "database" : "ods",
+[2025-11-12 22:19:36] [INFO] "batch_size" : 1000,
+[2025-11-12 22:19:36] [INFO] "driver" : "io.trino.jdbc.TrinoDriver",
+[2025-11-12 22:19:36] [INFO] "plugin_name" : "Jdbc",
+[2025-11-12 22:19:36] [INFO] "user" : "hadoop",
+[2025-11-12 22:19:36] [INFO] "url" : "jdbc:trino://172.31.0.246:28080/iceberg",
+[2025-11-12 22:19:36] [INFO] "table" : "ods_user_register_info_all_dc"
+[2025-11-12 22:19:36] [INFO] }
+[2025-11-12 22:19:36] [INFO] ],
+[2025-11-12 22:19:36] [INFO] "source" : [
+[2025-11-12 22:19:36] [INFO] {
+[2025-11-12 22:19:36] [INFO] "password" : "******",
+[2025-11-12 22:19:36] [INFO] "driver" : "com.mysql.cj.jdbc.Driver",
+[2025-11-12 22:19:36] [INFO] "query" : "SELECT * FROM user",
+[2025-11-12 22:19:36] [INFO] "plugin_name" : "Jdbc",
+[2025-11-12 22:19:36] [INFO] "user" : "readonly",
+[2025-11-12 22:19:36] [INFO] "url" : "jdbc:mysql://103.234.62.135:13306/mgdevin?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true"
+[2025-11-12 22:19:36] [INFO] }
+[2025-11-12 22:19:36] [INFO] ],
+[2025-11-12 22:19:36] [INFO] "env" : {
+[2025-11-12 22:19:36] [INFO] "job.mode" : "BATCH",
+[2025-11-12 22:19:36] [INFO] "execution.parallelism" : 2,
+[2025-11-12 22:19:36] [INFO] "checkpoint.interval" : 10000
+[2025-11-12 22:19:36] [INFO] }
+[2025-11-12 22:19:36] [INFO] }
+[2025-11-12 22:19:36] [INFO]
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,847 INFO org.apache.seatunnel.engine.core.parse.MultipleTableJobConfigParser - add common jar in plugins :[]
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,856 INFO org.apache.seatunnel.plugin.discovery.AbstractPluginDiscovery - Load SeaTunnelSink Plugin from /opt/seatunnel/connectors
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,861 INFO org.apache.seatunnel.plugin.discovery.AbstractPluginDiscovery - Discovery plugin jar for: PluginIdentifier{engineType='seatunnel', pluginType='source', pluginName='Jdbc'} at: file:/opt/seatunnel/connectors/connector-jdbc-2.3.8.jar
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,861 INFO org.apache.seatunnel.plugin.discovery.AbstractPluginDiscovery - Discovery plugin jar for: PluginIdentifier{engineType='seatunnel', pluginType='sink', pluginName='Jdbc'} at: file:/opt/seatunnel/connectors/connector-jdbc-2.3.8.jar
+[2025-11-12 22:19:36] [INFO] [] 2025-11-12 14:19:36,864 INFO org.apache.seatunnel.engine.core.parse.MultipleTableJobConfigParser - start generating all sources.
+[2025-11-12 22:19:37] [ERROR] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[2025-11-12 22:19:37] [ERROR] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2025-11-12 22:19:37] [ERROR] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[2025-11-12 22:19:41] [INFO] [] 2025-11-12 14:19:41,262 INFO org.apache.seatunnel.engine.server.resourcemanager.AbstractResourceManager - Init ResourceManager
+[2025-11-12 22:19:41] [INFO] [] 2025-11-12 14:19:41,262 INFO org.apache.seatunnel.engine.server.resourcemanager.AbstractResourceManager - initWorker...
+[2025-11-12 22:19:41] [INFO] [] 2025-11-12 14:19:41,263 INFO org.apache.seatunnel.engine.server.resourcemanager.AbstractResourceManager - init live nodes: [[172.18.0.2]:5801]
+[2025-11-12 22:19:41] [INFO] [] 2025-11-12 14:19:41,264 INFO org.apache.seatunnel.engine.server.resourcemanager.AbstractResourceManager - received new worker register: [172.18.0.2]:5801
+[2025-11-12 22:19:41] [INFO] [] 2025-11-12 14:19:41,264 INFO org.apache.seatunnel.engine.server.resourcemanager.AbstractResourceManager - registerWorker: {[172.18.0.2]:5801=WorkerProfile(address=[172.18.0.2]:5801, profile=ResourceProfile{cpu=CPU{core=0}, heapMemory=Memory{bytes=2147483648}}, unassignedResource=ResourceProfile{cpu=CPU{core=0}, heapMemory=Memory{bytes=2147483648}}, dynamicSlot=true, assignedSlots=[], unassignedSlots=[], attributes={})}
+[2025-11-12 22:20:36] [INFO] [] 2025-11-12 14:20:36,265 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:20:36] [INFO] ***********************************************
+[2025-11-12 22:20:36] [INFO] CoordinatorService Thread Pool Status
+[2025-11-12 22:20:36] [INFO] ***********************************************
+[2025-11-12 22:20:36] [INFO] activeCount : 0
+[2025-11-12 22:20:36] [INFO] corePoolSize : 0
+[2025-11-12 22:20:36] [INFO] maximumPoolSize : 2147483647
+[2025-11-12 22:20:36] [INFO] poolSize : 1
+[2025-11-12 22:20:36] [INFO] completedTaskCount : 1
+[2025-11-12 22:20:36] [INFO] taskCount : 1
+[2025-11-12 22:20:36] [INFO] ***********************************************
+[2025-11-12 22:20:36] [INFO]
+[2025-11-12 22:20:36] [INFO] [] 2025-11-12 14:20:36,284 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:20:36] [INFO] ***********************************************
+[2025-11-12 22:20:36] [INFO] Job info detail
+[2025-11-12 22:20:36] [INFO] ***********************************************
+[2025-11-12 22:20:36] [INFO] createdJobCount : 0
+[2025-11-12 22:20:36] [INFO] scheduledJobCount : 0
+[2025-11-12 22:20:36] [INFO] runningJobCount : 0
+[2025-11-12 22:20:36] [INFO] failingJobCount : 0
+[2025-11-12 22:20:36] [INFO] failedJobCount : 0
+[2025-11-12 22:20:36] [INFO] cancellingJobCount : 0
+[2025-11-12 22:20:36] [INFO] canceledJobCount : 0
+[2025-11-12 22:20:36] [INFO] finishedJobCount : 0
+[2025-11-12 22:20:36] [INFO] ***********************************************
+[2025-11-12 22:20:36] [INFO]
+[2025-11-12 22:21:36] [INFO] [] 2025-11-12 14:21:36,264 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:21:36] [INFO] ***********************************************
+[2025-11-12 22:21:36] [INFO] CoordinatorService Thread Pool Status
+[2025-11-12 22:21:36] [INFO] ***********************************************
+[2025-11-12 22:21:36] [INFO] activeCount : 0
+[2025-11-12 22:21:36] [INFO] corePoolSize : 0
+[2025-11-12 22:21:36] [INFO] maximumPoolSize : 2147483647
+[2025-11-12 22:21:36] [INFO] poolSize : 0
+[2025-11-12 22:21:36] [INFO] completedTaskCount : 1
+[2025-11-12 22:21:36] [INFO] taskCount : 1
+[2025-11-12 22:21:36] [INFO] ***********************************************
+[2025-11-12 22:21:36] [INFO]
+[2025-11-12 22:21:36] [INFO] [] 2025-11-12 14:21:36,267 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:21:36] [INFO] ***********************************************
+[2025-11-12 22:21:36] [INFO] Job info detail
+[2025-11-12 22:21:36] [INFO] ***********************************************
+[2025-11-12 22:21:36] [INFO] createdJobCount : 0
+[2025-11-12 22:21:36] [INFO] scheduledJobCount : 0
+[2025-11-12 22:21:36] [INFO] runningJobCount : 0
+[2025-11-12 22:21:36] [INFO] failingJobCount : 0
+[2025-11-12 22:21:36] [INFO] failedJobCount : 0
+[2025-11-12 22:21:36] [INFO] cancellingJobCount : 0
+[2025-11-12 22:21:36] [INFO] canceledJobCount : 0
+[2025-11-12 22:21:36] [INFO] finishedJobCount : 0
+[2025-11-12 22:21:36] [INFO] ***********************************************
+[2025-11-12 22:21:36] [INFO]
+[2025-11-12 22:21:44] [INFO] [] 2025-11-12 14:21:44,591 INFO org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.mysql.MySqlCatalog - Failed to get mysql version, fallback to default version: V_5_7
+[2025-11-12 22:21:44] [INFO] org.apache.seatunnel.api.table.catalog.exception.CatalogException: ErrorCode:[API-03], ErrorDescription:[Catalog initialize failed] - Failed connecting to jdbc:mysql://103.234.62.135:13306/mgdevin?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true via JDBC.
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.getConnection(AbstractJdbcCatalog.java:124) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.mysql.MySqlCatalog.resolveVersion(MySqlCatalog.java:219) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.mysql.MySqlCatalog.<init>(MySqlCatalog.java:66) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.mysql.MySqlCatalogFactory.createCatalog(MySqlCatalogFactory.java:53) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.api.table.factory.FactoryUtil.lambda$createOptionalCatalog$0(FactoryUtil.java:174) ~[seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at java.util.Optional.map(Optional.java:215) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.api.table.factory.FactoryUtil.createOptionalCatalog(FactoryUtil.java:173) ~[seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.utils.JdbcCatalogUtils.findCatalog(JdbcCatalogUtils.java:385) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.utils.JdbcCatalogUtils.getTables(JdbcCatalogUtils.java:74) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.source.JdbcSource.<init>(JdbcSource.java:57) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.source.JdbcSourceFactory.lambda$createSource$0(JdbcSourceFactory.java:80) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.api.table.factory.FactoryUtil.createAndPrepareSource(FactoryUtil.java:113) [seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.api.table.factory.FactoryUtil.createAndPrepareSource(FactoryUtil.java:74) [seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.engine.core.parse.MultipleTableJobConfigParser.parseSource(MultipleTableJobConfigParser.java:375) [seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.engine.core.parse.MultipleTableJobConfigParser.parse(MultipleTableJobConfigParser.java:209) [seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.engine.client.job.ClientJobExecutionEnvironment.getLogicalDag(ClientJobExecutionEnvironment.java:114) [seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.engine.client.job.ClientJobExecutionEnvironment.execute(ClientJobExecutionEnvironment.java:182) [seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.core.starter.seatunnel.command.ClientExecuteCommand.execute(ClientExecuteCommand.java:160) [seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.core.starter.SeaTunnel.run(SeaTunnel.java:40) [seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.core.starter.seatunnel.SeaTunnelClient.main(SeaTunnelClient.java:34) [seatunnel-starter.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+[2025-11-12 22:21:44] [INFO]
+[2025-11-12 22:21:44] [INFO] The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.getConnection(AbstractJdbcCatalog.java:120) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] ... 19 more
+[2025-11-12 22:21:44] [INFO] Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+[2025-11-12 22:21:44] [INFO]
+[2025-11-12 22:21:44] [INFO] The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-11-12 22:21:44] [INFO] at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.getConnection(AbstractJdbcCatalog.java:120) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] ... 19 more
+[2025-11-12 22:21:44] [INFO] Caused by: java.net.ConnectException: Connection timed out (Connection timed out)
+[2025-11-12 22:21:44] [INFO] at java.net.PlainSocketImpl.socketConnect(Native Method) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at java.net.Socket.connect(Socket.java:607) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.NativeSession.connect(NativeSession.java:120) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+[2025-11-12 22:21:44] [INFO] at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_342]
+[2025-11-12 22:21:44] [INFO] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.getConnection(AbstractJdbcCatalog.java:120) ~[connector-jdbc-2.3.8.jar:2.3.8]
+[2025-11-12 22:21:44] [INFO] ... 19 more
+[2025-11-12 22:21:44] [INFO] [] 2025-11-12 14:21:44,603 INFO org.apache.seatunnel.connectors.seatunnel.jdbc.utils.JdbcCatalogUtils - Loading catalog tables for catalog : class org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.mysql.MySqlCatalog
+[2025-11-12 22:22:36] [INFO] [] 2025-11-12 14:22:36,265 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:22:36] [INFO] ***********************************************
+[2025-11-12 22:22:36] [INFO] CoordinatorService Thread Pool Status
+[2025-11-12 22:22:36] [INFO] ***********************************************
+[2025-11-12 22:22:36] [INFO] activeCount : 0
+[2025-11-12 22:22:36] [INFO] corePoolSize : 0
+[2025-11-12 22:22:36] [INFO] maximumPoolSize : 2147483647
+[2025-11-12 22:22:36] [INFO] poolSize : 0
+[2025-11-12 22:22:36] [INFO] completedTaskCount : 1
+[2025-11-12 22:22:36] [INFO] taskCount : 1
+[2025-11-12 22:22:36] [INFO] ***********************************************
+[2025-11-12 22:22:36] [INFO]
+[2025-11-12 22:22:36] [INFO] [] 2025-11-12 14:22:36,266 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:22:36] [INFO] ***********************************************
+[2025-11-12 22:22:36] [INFO] Job info detail
+[2025-11-12 22:22:36] [INFO] ***********************************************
+[2025-11-12 22:22:36] [INFO] createdJobCount : 0
+[2025-11-12 22:22:36] [INFO] scheduledJobCount : 0
+[2025-11-12 22:22:36] [INFO] runningJobCount : 0
+[2025-11-12 22:22:36] [INFO] failingJobCount : 0
+[2025-11-12 22:22:36] [INFO] failedJobCount : 0
+[2025-11-12 22:22:36] [INFO] cancellingJobCount : 0
+[2025-11-12 22:22:36] [INFO] canceledJobCount : 0
+[2025-11-12 22:22:36] [INFO] finishedJobCount : 0
+[2025-11-12 22:22:36] [INFO] ***********************************************
+[2025-11-12 22:22:36] [INFO]
+[2025-11-12 22:22:42] [INFO] 2025-11-12T14:22:42.277+0000: [GC pause (G1 Evacuation Pause) (young) (initial-mark), 0.0184243 secs]
+[2025-11-12 22:22:42] [INFO] [Parallel Time: 12.5 ms, GC Workers: 4]
+[2025-11-12 22:22:42] [INFO] [GC Worker Start (ms): Min: 188029.5, Avg: 188029.5, Max: 188029.5, Diff: 0.0]
+[2025-11-12 22:22:42] [INFO] [Ext Root Scanning (ms): Min: 1.7, Avg: 2.0, Max: 2.5, Diff: 0.8, Sum: 8.1]
+[2025-11-12 22:22:42] [INFO] [Update RS (ms): Min: 0.1, Avg: 0.2, Max: 0.5, Diff: 0.4, Sum: 0.9]
+[2025-11-12 22:22:42] [INFO] [Processed Buffers: Min: 1, Avg: 6.2, Max: 10, Diff: 9, Sum: 25]
+[2025-11-12 22:22:42] [INFO] [Scan RS (ms): Min: 0.3, Avg: 0.4, Max: 0.4, Diff: 0.1, Sum: 1.5]
+[2025-11-12 22:22:42] [INFO] [Code Root Scanning (ms): Min: 0.0, Avg: 0.3, Max: 0.6, Diff: 0.6, Sum: 1.4]
+[2025-11-12 22:22:42] [INFO] [Object Copy (ms): Min: 8.8, Avg: 9.2, Max: 9.4, Diff: 0.6, Sum: 36.7]
+[2025-11-12 22:22:42] [INFO] [Termination (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.0]
+[2025-11-12 22:22:42] [INFO] [Termination Attempts: Min: 1, Avg: 1.2, Max: 2, Diff: 1, Sum: 5]
+[2025-11-12 22:22:42] [INFO] [GC Worker Other (ms): Min: 0.0, Avg: 0.0, Max: 0.0, Diff: 0.0, Sum: 0.1]
+[2025-11-12 22:22:42] [INFO] [GC Worker Total (ms): Min: 12.1, Avg: 12.1, Max: 12.2, Diff: 0.0, Sum: 48.6]
+[2025-11-12 22:22:42] [INFO] [GC Worker End (ms): Min: 188041.6, Avg: 188041.6, Max: 188041.7, Diff: 0.0]
+[2025-11-12 22:22:42] [INFO] [Code Root Fixup: 0.1 ms]
+[2025-11-12 22:22:42] [INFO] [Code Root Purge: 0.0 ms]
+[2025-11-12 22:22:42] [INFO] [Clear CT: 0.1 ms]
+[2025-11-12 22:22:42] [INFO] [Other: 5.7 ms]
+[2025-11-12 22:22:42] [INFO] [Choose CSet: 0.0 ms]
+[2025-11-12 22:22:42] [INFO] [Ref Proc: 5.2 ms]
+[2025-11-12 22:22:42] [INFO] [Ref Enq: 0.0 ms]
+[2025-11-12 22:22:42] [INFO] [Redirty Cards: 0.1 ms]
+[2025-11-12 22:22:42] [INFO] [Humongous Register: 0.0 ms]
+[2025-11-12 22:22:42] [INFO] [Humongous Reclaim: 0.0 ms]
+[2025-11-12 22:22:42] [INFO] [Free CSet: 0.1 ms]
+[2025-11-12 22:22:42] [INFO] [Eden: 201.0M(201.0M)->0.0B(222.0M) Survivors: 15360.0K->27648.0K Heap: 223.2M(1024.0M)->36502.5K(1024.0M)]
+[2025-11-12 22:22:42] [INFO] [Times: user=0.04 sys=0.00, real=0.02 secs]
+[2025-11-12 22:22:42] [INFO] 2025-11-12T14:22:42.295+0000: [GC concurrent-root-region-scan-start]
+[2025-11-12 22:22:42] [INFO] 2025-11-12T14:22:42.312+0000: [GC concurrent-root-region-scan-end, 0.0166655 secs]
+[2025-11-12 22:22:42] [INFO] 2025-11-12T14:22:42.312+0000: [GC concurrent-mark-start]
+[2025-11-12 22:22:42] [INFO] 2025-11-12T14:22:42.321+0000: [GC concurrent-mark-end, 0.0091597 secs]
+[2025-11-12 22:22:42] [INFO] 2025-11-12T14:22:42.322+0000: [GC remark 2025-11-12T14:22:42.322+0000: [Finalize Marking, 0.0007774 secs] 2025-11-12T14:22:42.322+0000: [GC ref-proc, 0.0007258 secs] 2025-11-12T14:22:42.323+0000: [Unloading, 0.0067940 secs], 0.0085175 secs]
+[2025-11-12 22:22:42] [INFO] [Times: user=0.02 sys=0.00, real=0.01 secs]
+[2025-11-12 22:22:42] [INFO] 2025-11-12T14:22:42.330+0000: [GC cleanup 39697K->38673K(1024M), 0.0006607 secs]
+[2025-11-12 22:22:42] [INFO] [Times: user=0.00 sys=0.00, real=0.00 secs]
+[2025-11-12 22:22:42] [INFO] 2025-11-12T14:22:42.331+0000: [GC concurrent-cleanup-start]
+[2025-11-12 22:22:42] [INFO] 2025-11-12T14:22:42.331+0000: [GC concurrent-cleanup-end, 0.0000151 secs]
+[2025-11-12 22:23:36] [INFO] [] 2025-11-12 14:23:36,264 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:23:36] [INFO] ***********************************************
+[2025-11-12 22:23:36] [INFO] CoordinatorService Thread Pool Status
+[2025-11-12 22:23:36] [INFO] ***********************************************
+[2025-11-12 22:23:36] [INFO] activeCount : 0
+[2025-11-12 22:23:36] [INFO] corePoolSize : 0
+[2025-11-12 22:23:36] [INFO] maximumPoolSize : 2147483647
+[2025-11-12 22:23:36] [INFO] poolSize : 0
+[2025-11-12 22:23:36] [INFO] completedTaskCount : 1
+[2025-11-12 22:23:36] [INFO] taskCount : 1
+[2025-11-12 22:23:36] [INFO] ***********************************************
+[2025-11-12 22:23:36] [INFO]
+[2025-11-12 22:23:36] [INFO] [] 2025-11-12 14:23:36,265 INFO org.apache.seatunnel.engine.server.CoordinatorService - [172.18.0.2]:5801 [seatunnel-853955] [5.1]
+[2025-11-12 22:23:36] [INFO] ***********************************************
+[2025-11-12 22:23:36] [INFO] Job info detail
+[2025-11-12 22:23:36] [INFO] ***********************************************
+[2025-11-12 22:23:36] [INFO] createdJobCount : 0
+[2025-11-12 22:23:36] [INFO] scheduledJobCount : 0
+[2025-11-12 22:23:36] [INFO] runningJobCount : 0
+[2025-11-12 22:23:36] [INFO] failingJobCount : 0
+[2025-11-12 22:23:36] [INFO] failedJobCount : 0
+[2025-11-12 22:23:36] [INFO] cancellingJobCount : 0
+[2025-11-12 22:23:36] [INFO] canceledJobCount : 0
+[2025-11-12 22:23:36] [INFO] finishedJobCount : 0
+[2025-11-12 22:23:36] [INFO] ***********************************************
+[2025-11-12 22:23:36] [INFO]
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,855 INFO org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog - Catalog MySQL closing
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,856 INFO com.hazelcast.core.LifecycleService - hz.client_1 [seatunnel-853955] [5.1] HazelcastClient 5.1 (20220228 - 21f20e7) is SHUTTING_DOWN
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,858 INFO com.hazelcast.internal.server.tcp.TcpServerConnection - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Connection[id=1, /127.0.0.1:5801->/127.0.0.1:42008, qualifier=null, endpoint=[127.0.0.1]:42008, remoteUuid=99145094-f3c5-4f50-a15a-1c2429bcb152, alive=false, connectionType=JVM, planeIndex=-1] closed. Reason: Connection closed by the other side
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,859 INFO com.hazelcast.client.impl.connection.ClientConnectionManager - hz.client_1 [seatunnel-853955] [5.1] Removed connection to endpoint: [172.18.0.2]:5801:edae4d4d-de8f-4b2b-9be2-69adb3c41cdd, connection: ClientConnection{alive=false, connectionId=1, channel=NioChannel{/127.0.0.1:42008->localhost/127.0.0.1:5801}, remoteAddress=[172.18.0.2]:5801, lastReadTime=2025-11-12 14:23:51.636, lastWriteTime=2025-11-12 14:23:51.636, closedTime=2025-11-12 14:23:51.857, connected server version=5.1}
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,859 INFO com.hazelcast.core.LifecycleService - hz.client_1 [seatunnel-853955] [5.1] HazelcastClient 5.1 (20220228 - 21f20e7) is CLIENT_DISCONNECTED
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,861 INFO com.hazelcast.client.impl.ClientEndpointManager - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Destroying ClientEndpoint{connection=Connection[id=1, /127.0.0.1:5801->/127.0.0.1:42008, qualifier=null, endpoint=[127.0.0.1]:42008, remoteUuid=99145094-f3c5-4f50-a15a-1c2429bcb152, alive=false, connectionType=JVM, planeIndex=-1], clientUuid=99145094-f3c5-4f50-a15a-1c2429bcb152, clientName=hz.client_1, authenticated=true, clientVersion=5.1, creationTime=1762957176573, latest clientAttributes=lastStatisticsCollectionTime=1762957431633,enterprise=false,clientType=JVM,clientVersion=5.1,clusterConnectionTimestamp=1762957176530,clientAddress=127.0.0.1,clientName=hz.client_1,credentials.principal=null,os.committedVirtualMemorySize=5950558208,os.freePhysicalMemorySize=583987200,os.freeSwapSpaceSize=4294963200,os.maxFileDescriptorCount=1048576,os.openFileDescriptorCount=79,os.processCpuTime=12750000000,os.systemLoadAverage=0.0,os.totalPhysicalMemorySize=8101019648,os.totalSwapSpaceSize=4294963200,runtime.availableProcessors=4,runtime.freeMemory=994499936,runtime.maxMemory=2147483648,runtime.totalMemory=1073741824,runtime.uptime=257388,runtime.usedMemory=79241888, labels=[]}
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,863 INFO com.hazelcast.core.LifecycleService - hz.client_1 [seatunnel-853955] [5.1] HazelcastClient 5.1 (20220228 - 21f20e7) is SHUTDOWN
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,863 INFO org.apache.seatunnel.core.starter.seatunnel.command.ClientExecuteCommand - Closed SeaTunnel client......
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,863 INFO com.hazelcast.core.LifecycleService - [172.18.0.2]:5801 [seatunnel-853955] [5.1] [172.18.0.2]:5801 is SHUTTING_DOWN
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,868 INFO com.hazelcast.internal.partition.impl.MigrationManager - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Shutdown request of Member [172.18.0.2]:5801 - edae4d4d-de8f-4b2b-9be2-69adb3c41cdd this master is handled
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,873 INFO com.hazelcast.instance.impl.Node - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Shutting down connection manager...
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,875 INFO com.hazelcast.instance.impl.Node - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Shutting down node engine...
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,891 INFO org.apache.seatunnel.engine.core.classloader.DefaultClassLoaderService - close classloader service
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,893 INFO org.apache.seatunnel.engine.server.EventService - Event forward thread interrupted
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,900 INFO com.hazelcast.instance.impl.NodeExtension - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Destroying node NodeExtension.
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,901 INFO com.hazelcast.instance.impl.Node - [172.18.0.2]:5801 [seatunnel-853955] [5.1] Hazelcast Shutdown is completed in 35 ms.
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,901 INFO com.hazelcast.core.LifecycleService - [172.18.0.2]:5801 [seatunnel-853955] [5.1] [172.18.0.2]:5801 is SHUTDOWN
+[2025-11-12 22:23:51] [INFO] [] 2025-11-12 14:23:51,901 INFO org.apache.seatunnel.core.starter.seatunnel.command.ClientExecuteCommand - Closed HazelcastInstance ......
+[2025-11-12 22:23:51] [ERROR] [] 2025-11-12 14:23:51,901 ERROR org.apache.seatunnel.core.starter.SeaTunnel -
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] ===============================================================================
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] [] 2025-11-12 14:23:51,901 ERROR org.apache.seatunnel.core.starter.SeaTunnel - Fatal Error,
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] [] 2025-11-12 14:23:51,901 ERROR org.apache.seatunnel.core.starter.SeaTunnel - Please submit bug report in https://github.com/apache/seatunnel/issues
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] [] 2025-11-12 14:23:51,901 ERROR org.apache.seatunnel.core.starter.SeaTunnel - Reason:SeaTunnel job executed failed
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] [] 2025-11-12 14:23:51,903 ERROR org.apache.seatunnel.core.starter.SeaTunnel - Exception StackTrace:org.apache.seatunnel.core.starter.exception.CommandExecuteException: SeaTunnel job executed failed
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.core.starter.seatunnel.command.ClientExecuteCommand.execute(ClientExecuteCommand.java:213)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.core.starter.SeaTunnel.run(SeaTunnel.java:40)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.core.starter.seatunnel.SeaTunnelClient.main(SeaTunnelClient.java:34)
+[2025-11-12 22:23:51] [ERROR] Caused by: org.apache.seatunnel.api.table.factory.FactoryException: ErrorCode:[API-06], ErrorDescription:[Factory initialize failed] - Unable to create a source for identifier 'Jdbc'.
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.api.table.factory.FactoryUtil.createAndPrepareSource(FactoryUtil.java:101)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.engine.core.parse.MultipleTableJobConfigParser.parseSource(MultipleTableJobConfigParser.java:375)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.engine.core.parse.MultipleTableJobConfigParser.parse(MultipleTableJobConfigParser.java:209)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.engine.client.job.ClientJobExecutionEnvironment.getLogicalDag(ClientJobExecutionEnvironment.java:114)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.engine.client.job.ClientJobExecutionEnvironment.execute(ClientJobExecutionEnvironment.java:182)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.core.starter.seatunnel.command.ClientExecuteCommand.execute(ClientExecuteCommand.java:160)
+[2025-11-12 22:23:51] [ERROR] ... 2 more
+[2025-11-12 22:23:51] [ERROR] Caused by: org.apache.seatunnel.api.table.catalog.exception.CatalogException: ErrorCode:[API-03], ErrorDescription:[Catalog initialize failed] - Failed connecting to jdbc:mysql://103.234.62.135:13306/mgdevin?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true via JDBC.
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.getConnection(AbstractJdbcCatalog.java:124)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.open(AbstractJdbcCatalog.java:130)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.utils.JdbcCatalogUtils.getTables(JdbcCatalogUtils.java:79)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.source.JdbcSource.<init>(JdbcSource.java:57)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.source.JdbcSourceFactory.lambda$createSource$0(JdbcSourceFactory.java:80)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.api.table.factory.FactoryUtil.createAndPrepareSource(FactoryUtil.java:113)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.api.table.factory.FactoryUtil.createAndPrepareSource(FactoryUtil.java:74)
+[2025-11-12 22:23:51] [ERROR] ... 7 more
+[2025-11-12 22:23:51] [ERROR] Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+[2025-11-12 22:23:51] [ERROR] at java.sql.DriverManager.getConnection(DriverManager.java:664)
+[2025-11-12 22:23:51] [ERROR] at java.sql.DriverManager.getConnection(DriverManager.java:247)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.getConnection(AbstractJdbcCatalog.java:120)
+[2025-11-12 22:23:51] [ERROR] ... 13 more
+[2025-11-12 22:23:51] [ERROR] Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-11-12 22:23:51] [ERROR] at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2025-11-12 22:23:51] [ERROR] at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+[2025-11-12 22:23:51] [ERROR] at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2025-11-12 22:23:51] [ERROR] at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+[2025-11-12 22:23:51] [ERROR] ... 19 more
+[2025-11-12 22:23:51] [ERROR] Caused by: java.net.ConnectException: Connection timed out (Connection timed out)
+[2025-11-12 22:23:51] [ERROR] at java.net.PlainSocketImpl.socketConnect(Native Method)
+[2025-11-12 22:23:51] [ERROR] at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+[2025-11-12 22:23:51] [ERROR] at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+[2025-11-12 22:23:51] [ERROR] at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+[2025-11-12 22:23:51] [ERROR] at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+[2025-11-12 22:23:51] [ERROR] at java.net.Socket.connect(Socket.java:607)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+[2025-11-12 22:23:51] [ERROR] ... 22 more
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] [] 2025-11-12 14:23:51,903 ERROR org.apache.seatunnel.core.starter.SeaTunnel -
+[2025-11-12 22:23:51] [ERROR] ===============================================================================
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] Exception in thread "main" org.apache.seatunnel.core.starter.exception.CommandExecuteException: SeaTunnel job executed failed
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.core.starter.seatunnel.command.ClientExecuteCommand.execute(ClientExecuteCommand.java:213)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.core.starter.SeaTunnel.run(SeaTunnel.java:40)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.core.starter.seatunnel.SeaTunnelClient.main(SeaTunnelClient.java:34)
+[2025-11-12 22:23:51] [ERROR] Caused by: org.apache.seatunnel.api.table.factory.FactoryException: ErrorCode:[API-06], ErrorDescription:[Factory initialize failed] - Unable to create a source for identifier 'Jdbc'.
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.api.table.factory.FactoryUtil.createAndPrepareSource(FactoryUtil.java:101)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.engine.core.parse.MultipleTableJobConfigParser.parseSource(MultipleTableJobConfigParser.java:375)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.engine.core.parse.MultipleTableJobConfigParser.parse(MultipleTableJobConfigParser.java:209)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.engine.client.job.ClientJobExecutionEnvironment.getLogicalDag(ClientJobExecutionEnvironment.java:114)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.engine.client.job.ClientJobExecutionEnvironment.execute(ClientJobExecutionEnvironment.java:182)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.core.starter.seatunnel.command.ClientExecuteCommand.execute(ClientExecuteCommand.java:160)
+[2025-11-12 22:23:51] [ERROR] ... 2 more
+[2025-11-12 22:23:51] [ERROR] Caused by: org.apache.seatunnel.api.table.catalog.exception.CatalogException: ErrorCode:[API-03], ErrorDescription:[Catalog initialize failed] - Failed connecting to jdbc:mysql://103.234.62.135:13306/mgdevin?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true via JDBC.
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.getConnection(AbstractJdbcCatalog.java:124)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.open(AbstractJdbcCatalog.java:130)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.utils.JdbcCatalogUtils.getTables(JdbcCatalogUtils.java:79)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.source.JdbcSource.<init>(JdbcSource.java:57)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.source.JdbcSourceFactory.lambda$createSource$0(JdbcSourceFactory.java:80)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.api.table.factory.FactoryUtil.createAndPrepareSource(FactoryUtil.java:113)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.api.table.factory.FactoryUtil.createAndPrepareSource(FactoryUtil.java:74)
+[2025-11-12 22:23:51] [ERROR] ... 7 more
+[2025-11-12 22:23:51] [ERROR] Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+[2025-11-12 22:23:51] [ERROR] at java.sql.DriverManager.getConnection(DriverManager.java:664)
+[2025-11-12 22:23:51] [ERROR] at java.sql.DriverManager.getConnection(DriverManager.java:247)
+[2025-11-12 22:23:51] [ERROR] at org.apache.seatunnel.connectors.seatunnel.jdbc.catalog.AbstractJdbcCatalog.getConnection(AbstractJdbcCatalog.java:120)
+[2025-11-12 22:23:51] [ERROR] ... 13 more
+[2025-11-12 22:23:51] [ERROR] Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+[2025-11-12 22:23:51] [ERROR]
+[2025-11-12 22:23:51] [ERROR] The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-11-12 22:23:51] [ERROR] at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2025-11-12 22:23:51] [ERROR] at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+[2025-11-12 22:23:51] [ERROR] at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2025-11-12 22:23:51] [ERROR] at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+[2025-11-12 22:23:51] [ERROR] ... 19 more
+[2025-11-12 22:23:51] [ERROR] Caused by: java.net.ConnectException: Connection timed out (Connection timed out)
+[2025-11-12 22:23:51] [ERROR] at java.net.PlainSocketImpl.socketConnect(Native Method)
+[2025-11-12 22:23:51] [ERROR] at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+[2025-11-12 22:23:51] [ERROR] at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+[2025-11-12 22:23:51] [ERROR] at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+[2025-11-12 22:23:51] [ERROR] at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+[2025-11-12 22:23:51] [ERROR] at java.net.Socket.connect(Socket.java:607)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+[2025-11-12 22:23:51] [ERROR] at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+[2025-11-12 22:23:51] [ERROR] ... 22 more
+[2025-11-12 22:23:51] [INFO] Heap
+[2025-11-12 22:23:51] [INFO] garbage-first heap total 1048576K, used 92822K [0x0000000080000000, 0x0000000080102000, 0x0000000100000000)
+[2025-11-12 22:23:51] [INFO] region size 1024K, 84 young (86016K), 27 survivors (27648K)
+[2025-11-12 22:23:51] [INFO] Metaspace used 51639K, capacity 56248K, committed 56400K, reserved 1097728K
+[2025-11-12 22:23:51] [INFO] class space used 6741K, capacity 7687K, committed 7804K, reserved 1048576K
+[2025-11-12 22:23:51] [ERROR] SeaTunnel 任务执行失败, exitCode: 1
