@@ -5,6 +5,94 @@
       <p>可视化的表结构设计工具</p>
     </div>
 
+    <!-- 数据仓湖架构分层展示 -->
+    <div class="architecture-section">
+      <div class="section-title">
+        <h3>数据仓湖架构分层</h3>
+        <el-button type="primary" size="small" @click="showArchitectureDetail = true">
+          <el-icon><InfoFilled /></el-icon>
+          查看详情
+        </el-button>
+      </div>
+      <div class="layer-flow">
+        <div class="layer-card ods">
+          <div class="layer-header">
+            <div class="layer-icon">
+              <el-icon :size="28"><Coin /></el-icon>
+            </div>
+            <div class="layer-info">
+              <div class="layer-name">ODS层</div>
+              <div class="layer-subtitle">原始数据层</div>
+            </div>
+          </div>
+          <div class="layer-desc">Operation Data Store</div>
+          <div class="layer-stats">
+            <span>{{ layerStats.ODS }} 张表</span>
+          </div>
+        </div>
+
+        <div class="flow-arrow">
+          <el-icon :size="24"><Right /></el-icon>
+        </div>
+
+        <div class="layer-card dwd">
+          <div class="layer-header">
+            <div class="layer-icon">
+              <el-icon :size="28"><Grid /></el-icon>
+            </div>
+            <div class="layer-info">
+              <div class="layer-name">DWD层</div>
+              <div class="layer-subtitle">明细数据层</div>
+            </div>
+          </div>
+          <div class="layer-desc">Data Warehouse Detail</div>
+          <div class="layer-stats">
+            <span>{{ layerStats.DWD }} 张表</span>
+          </div>
+        </div>
+
+        <div class="flow-arrow">
+          <el-icon :size="24"><Right /></el-icon>
+        </div>
+
+        <div class="layer-card dws">
+          <div class="layer-header">
+            <div class="layer-icon">
+              <el-icon :size="28"><Histogram /></el-icon>
+            </div>
+            <div class="layer-info">
+              <div class="layer-name">DWS层</div>
+              <div class="layer-subtitle">汇总数据层</div>
+            </div>
+          </div>
+          <div class="layer-desc">Data Warehouse Summary</div>
+          <div class="layer-stats">
+            <span>{{ layerStats.DWS }} 张表</span>
+          </div>
+        </div>
+
+        <div class="flow-arrow">
+          <el-icon :size="24"><Right /></el-icon>
+        </div>
+
+        <div class="layer-card ads">
+          <div class="layer-header">
+            <div class="layer-icon">
+              <el-icon :size="28"><TrendCharts /></el-icon>
+            </div>
+            <div class="layer-info">
+              <div class="layer-name">ADS层</div>
+              <div class="layer-subtitle">应用数据层</div>
+            </div>
+          </div>
+          <div class="layer-desc">Application Data Store</div>
+          <div class="layer-stats">
+            <span>{{ layerStats.ADS }} 张表</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="designer-container">
       <!-- 左侧工具栏 -->
       <div class="left-panel">
@@ -196,6 +284,11 @@ import {
   Close,
   Key,
   Edit,
+  InfoFilled,
+  Right,
+  Coin,
+  Histogram,
+  TrendCharts,
 } from '@element-plus/icons-vue'
 
 interface Field {
@@ -235,12 +328,21 @@ interface Model {
 const searchText = ref('')
 const selectedModel = ref<Model | null>(null)
 const showCreateDialog = ref(false)
+const showArchitectureDetail = ref(false)
 const zoomLevel = ref(1)
 const canvasRef = ref<HTMLElement>()
 
 const newModel = ref({
   name: '',
   description: '',
+})
+
+// 各层统计
+const layerStats = ref({
+  ODS: 12,
+  DWD: 28,
+  DWS: 15,
+  ADS: 8,
 })
 
 // 模拟数据
@@ -401,6 +503,131 @@ const onDragEnd = (e: DragEvent, table: Table) => {
     font-size: 14px;
     color: #86909c;
   }
+}
+
+.architecture-section {
+  padding: 24px;
+  background: #fff;
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d2129;
+  }
+}
+
+.layer-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.layer-card {
+  flex: 1;
+  padding: 24px;
+  border-radius: 12px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  &.ods {
+    background: linear-gradient(135deg, #e8f4ff 0%, #d0e8ff 100%);
+    border: 2px solid #409eff;
+  }
+
+  &.dwd {
+    background: linear-gradient(135deg, #e8fff4 0%, #d0ffe8 100%);
+    border: 2px solid #00b42a;
+  }
+
+  &.dws {
+    background: linear-gradient(135deg, #fff7e8 0%, #ffefd0 100%);
+    border: 2px solid #ff7d00;
+  }
+
+  &.ads {
+    background: linear-gradient(135deg, #ffece8 0%, #ffddd0 100%);
+    border: 2px solid #f53f3f;
+  }
+}
+
+.layer-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.layer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  color: #409eff;
+
+  .dwd & {
+    color: #00b42a;
+  }
+
+  .dws & {
+    color: #ff7d00;
+  }
+
+  .ads & {
+    color: #f53f3f;
+  }
+}
+
+.layer-info {
+  flex: 1;
+}
+
+.layer-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d2129;
+  margin-bottom: 4px;
+}
+
+.layer-subtitle {
+  font-size: 13px;
+  color: #4e5969;
+}
+
+.layer-desc {
+  font-size: 12px;
+  color: #86909c;
+  margin-bottom: 12px;
+}
+
+.layer-stats {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d2129;
+}
+
+.flow-arrow {
+  color: #86909c;
+  font-size: 24px;
 }
 
 .designer-container {
