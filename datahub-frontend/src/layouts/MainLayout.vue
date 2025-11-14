@@ -130,13 +130,28 @@
                   </el-icon>
                   <span>{{ $t(route.meta?.title as string) }}</span>
                 </template>
-                <el-menu-item
-                  v-for="child in route.children"
-                  :key="child.fullPath"
-                  :index="child.fullPath"
-                >
-                  <span>{{ $t(child.meta?.title as string) }}</span>
-                </el-menu-item>
+                
+                <!-- 遍历子菜单 -->
+                <template v-for="child in route.children" :key="child.fullPath">
+                  <!-- 如果子菜单还有children，则再次渲染为子菜单 -->
+                  <el-sub-menu v-if="child.children && child.children.length" :index="child.fullPath">
+                    <template #title>
+                      <span>{{ $t(child.meta?.title as string) }}</span>
+                    </template>
+                    <el-menu-item
+                      v-for="grandChild in child.children"
+                      :key="grandChild.fullPath"
+                      :index="grandChild.fullPath"
+                    >
+                      <span>{{ $t(grandChild.meta?.title as string) }}</span>
+                    </el-menu-item>
+                  </el-sub-menu>
+                  
+                  <!-- 否则直接显示为菜单项 -->
+                  <el-menu-item v-else :index="child.fullPath">
+                    <span>{{ $t(child.meta?.title as string) }}</span>
+                  </el-menu-item>
+                </template>
               </el-sub-menu>
 
               <el-menu-item v-else :index="route.fullPath">
@@ -225,6 +240,7 @@ const layoutRoutes = computed(() => {
 interface MenuChild {
   meta?: RouteMeta
   fullPath: string
+  children?: MenuChild[] // 支持三级菜单
 }
 
 interface MenuItem {
@@ -236,13 +252,28 @@ interface MenuItem {
 const menuItems = computed<MenuItem[]>(() =>
   layoutRoutes.value.map(routeRecord => {
     const fullPath = normalizePath(routeRecord.path)
-    const children =
-      (routeRecord.children || [])
+    
+    // 递归处理children
+    const processChildren = (children: any[], parentPath: string): MenuChild[] => {
+      return children
         .filter(child => !child.meta?.hideInMenu)
-        .map(child => ({
-          meta: child.meta,
-          fullPath: joinPaths(fullPath, typeof child.path === 'string' ? child.path : undefined),
-        })) || []
+        .map(child => {
+          const childFullPath = joinPaths(parentPath, typeof child.path === 'string' ? child.path : undefined)
+          const grandChildren = child.children
+            ? processChildren(child.children, childFullPath)
+            : []
+          
+          return {
+            meta: child.meta,
+            fullPath: childFullPath,
+            children: grandChildren,
+          }
+        })
+    }
+    
+    const children = routeRecord.children
+      ? processChildren(routeRecord.children, fullPath)
+      : []
 
     return {
       meta: routeRecord.meta,
