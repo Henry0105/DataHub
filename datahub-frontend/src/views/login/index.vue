@@ -2,7 +2,17 @@
   <div class="login-container">
     <div class="login-box">
       <div class="login-header">
-        <h1>AllData数据中台</h1>
+        <div class="logo-container">
+          <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            class="logo-video"
+          >
+            <source src="/src/assets/animation.webm" type="video/webm">
+          </video>
+        </div>
         <p>企业级一站式数据管理平台</p>
       </div>
       
@@ -11,9 +21,10 @@
         :model="loginForm"
         :rules="loginRules"
         class="login-form"
+        label-position="top"
         @keyup.enter="handleLogin"
       >
-        <el-form-item prop="username">
+        <el-form-item label="用户名" prop="username">
           <el-input
             v-model="loginForm.username"
             placeholder="请输入用户名"
@@ -22,7 +33,7 @@
           />
         </el-form-item>
         
-        <el-form-item prop="password">
+        <el-form-item label="密码" prop="password">
           <el-input
             v-model="loginForm.password"
             type="password"
@@ -45,10 +56,6 @@
           </el-button>
         </el-form-item>
       </el-form>
-      
-      <div class="login-footer">
-        <p>默认账号: admin / admin123</p>
-      </div>
     </div>
   </div>
 </template>
@@ -107,40 +114,34 @@ const handleLogin = async () => {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #0052d9 0%, #0034b5 100%);
+  justify-content: flex-start;
+  padding-left: 10%;
+  background-image: url('https://cloudcache.tencent-cloud.com/qcloud/ui/static/tc_portal/c3f153dd-80a0-40a8-9a54-a3b7d6717ab8.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
   
-  // 背景装饰
+  // 背景遮罩,让登录框更突出
   &::before {
     content: '';
     position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    top: -200px;
-    right: -200px;
-    border-radius: 50%;
-  }
-  
-  &::after {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
-    bottom: -100px;
-    left: -100px;
-    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 0;
   }
   
   .login-box {
-    width: 440px;
-    padding: 48px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    width: 520px;
+    padding: 56px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
     
@@ -148,12 +149,28 @@ const handleLogin = async () => {
       text-align: center;
       margin-bottom: 48px;
       
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 16px;
+        height: 120px;
+        overflow: hidden;
+        
+        .logo-video {
+          height: 200px;
+          width: auto;
+          object-fit: cover;
+          transform: scale(1.3);
+        }
+      }
+      
       h1 {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 600;
         color: #1f2937;
-        margin-bottom: 12px;
-        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
       }
       
       p {
@@ -164,12 +181,19 @@ const handleLogin = async () => {
     }
     
     .login-form {
+      :deep(.el-form-item__label) {
+        font-weight: 500;
+        color: #374151;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+      
       :deep(.el-form-item) {
-        margin-bottom: 24px;
+        margin-bottom: 28px;
       }
       
       :deep(.el-input__wrapper) {
-        padding: 12px 16px;
+        padding: 14px 16px;
         border-radius: 8px;
         box-shadow: 0 0 0 1px #e5e7eb inset;
         
@@ -180,6 +204,7 @@ const handleLogin = async () => {
       
       :deep(.el-input__inner) {
         font-size: 14px;
+        height: 22px;
       }
       
       .login-button {

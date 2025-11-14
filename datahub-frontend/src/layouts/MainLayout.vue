@@ -4,8 +4,17 @@
     <el-header class="arco-header">
       <!-- Logo 区域 -->
       <div class="arco-logo">
-        <span class="logo-d">D</span>
-        <span class="logo-rest">ATAHUB</span>
+        <div class="logo-video-wrapper">
+          <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            class="logo-video"
+          >
+            <source src="/src/assets/animation.webm" type="video/webm">
+          </video>
+        </div>
       </div>
       
       <!-- 右侧工具栏 -->
@@ -322,6 +331,22 @@ const breadcrumbs = computed(() => {
       font-size: 22px;
       letter-spacing: 0.5px;
       cursor: pointer;
+      
+      .logo-video-wrapper {
+        height: 50px;
+        width: 180px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .logo-video {
+          height: 120px;
+          width: auto;
+          object-fit: cover;
+          transform: scale(1.2);
+        }
+      }
       
       .logo-d {
         color: #165dff;
