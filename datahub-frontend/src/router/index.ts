@@ -36,6 +36,37 @@ const routes: RouteRecordRaw[] = [
             component: () => import('@/views/datasophon/index.vue'),
             meta: { title: '数据运维' },
           },
+          {
+            path: 'modeling',
+            name: 'LakehouseModeling',
+            meta: { title: '湖仓建模' },
+            children: [
+              {
+                path: 'designer',
+                name: 'ModelDesigner',
+                component: () => import('@/views/modeling/designer/index.vue'),
+                meta: { title: '模型设计器' },
+              },
+              {
+                path: 'tables',
+                name: 'TableManagement',
+                component: () => import('@/views/modeling/tables/index.vue'),
+                meta: { title: '表管理中心' },
+              },
+              {
+                path: 'lineage',
+                name: 'DataLineage',
+                component: () => import('@/views/modeling/lineage/index.vue'),
+                meta: { title: '数据血统图' },
+              },
+              {
+                path: 'workbench',
+                name: 'SqlWorkbench',
+                component: () => import('@/views/modeling/workbench/index.vue'),
+                meta: { title: 'SQL工作台' },
+              },
+            ],
+          },
         ],
       },
       {
